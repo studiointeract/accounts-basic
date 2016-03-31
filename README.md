@@ -12,7 +12,7 @@ Current version 1.0.9
 5. **[Unstyled](https://github.com/studiointeract/react-accounts-ui#styling)** is the default, no CSS included.
 6. **[No password](https://github.com/studiointeract/react-accounts-ui#no-password-required)** sign up and sign in are included.
 7. **[Extra fields](https://github.com/studiointeract/react-accounts-ui#extra-fields)** is now supported.
-8. **[Server Side Rendering](https://github.com/studiointeract/react-accounts-ui#server-side-rendering)** are supported, trough FlowRouter (SSR).
+8. **[Server Side Rendering](https://github.com/studiointeract/react-accounts-ui#example-setup-using-flowrouter-meteor-13)** are supported, trough FlowRouter (SSR).
 9. **[Extending](https://github.com/studiointeract/react-accounts-ui#create-your-own-styled-version)** to make your own custom form, for your app, or as a package, all components can be extended and customized.
 
 ### Based on and extends studiointeract:react-accounts-ui
