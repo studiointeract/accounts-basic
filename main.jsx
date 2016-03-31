@@ -14,13 +14,15 @@ class Form extends Accounts.ui.Form {
     const { fields, buttons, error, message, ready = true} = this.props;
     return (
       <form className={ready ? "ready" : null} onSubmit={ evt => evt.preventDefault() } className="accounts-ui">
-        <Accounts.ui.Fields fields={ fields } />
+        {Object.keys(fields).length > 0 ? (
+          <Accounts.ui.Fields fields={ fields } />
+        ): null }
         { buttons['switchToPasswordReset'] ? (
           <Accounts.ui.Button
             className="forgot-password" {...buttons['switchToPasswordReset']} />
         ): null }
         <Accounts.ui.Buttons buttons={ _.omit(buttons, 'switchToPasswordReset') } />
-        <Accounts.ui.FormMessage message={ message } />
+        <Accounts.ui.FormMessage {...message} />
       </form>
     );
   }
@@ -31,8 +33,18 @@ class Button extends Accounts.ui.Button {}
 class Fields extends Accounts.ui.Fields {}
 class Field extends Accounts.ui.Field {
   render() {
-    const { id, hint, label, type = 'text', onChange } = this.props;
-    return (
+    const {
+      id,
+      hint,
+      label,
+      type = 'text',
+      onChange,
+      required = false,
+      className,
+      defaultValue = ""
+    } = this.props;
+    const { mount = true } = this.state;
+    return mount ? (
       <div className="field-group">
         <label htmlFor={ id }>{ label }</label>
         <div className="field">
@@ -41,10 +53,10 @@ class Field extends Accounts.ui.Field {
             autoCapitalize={ type == 'email' ? 'none' : false }
             autoCorrect="off"
             onChange={ onChange }
-            placeholder={ hint } defaultValue="" />
+            placeholder={ hint } defaultValue={ defaultValue } />
         </div>
       </div>
-    );
+    ) : null;
   }
 }
 class FormMessage extends Accounts.ui.FormMessage {}
