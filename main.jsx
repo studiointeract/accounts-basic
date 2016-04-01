@@ -1,5 +1,5 @@
 import React from 'react';
-import Accounts from 'meteor/studiointeract:react-accounts-ui';
+import Accounts from 'meteor/std:react-accounts-ui';
 
 /**
  * Form.propTypes = {
