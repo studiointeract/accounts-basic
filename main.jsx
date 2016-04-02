@@ -1,5 +1,5 @@
 import React from 'react';
-import Accounts from 'meteor/std:accounts-ui';
+import { Accounts, STATES } from 'meteor/std:accounts-ui';
 
 /**
  * Form.propTypes = {
@@ -11,17 +11,39 @@ import Accounts from 'meteor/std:accounts-ui';
  */
 class Form extends Accounts.ui.Form {
   render() {
-    const { fields, buttons, error, message, ready = true} = this.props;
+    const {
+      hasPasswordService,
+      oauthServices,
+      fields,
+      buttons,
+      error,
+      message,
+      ready = true,
+      className,
+      formState
+    } = this.props;
     return (
-      <form className={ready ? "ready" : null} onSubmit={ evt => evt.preventDefault() } className="accounts-ui">
+      <form className={[
+        "accounts-ui",
+        className,
+        ready ? "ready" : null
+      ].join(' ')}>
         {Object.keys(fields).length > 0 ? (
           <Accounts.ui.Fields fields={ fields } />
         ): null }
         { buttons['switchToPasswordReset'] ? (
-          <Accounts.ui.Button
-            className="forgot-password" {...buttons['switchToPasswordReset']} />
+          <Accounts.ui.Button className="forgot-password"
+                              {...buttons['switchToPasswordReset']} />
         ): null }
         <Accounts.ui.Buttons buttons={ _.omit(buttons, 'switchToPasswordReset') } />
+        { formState == STATES.SIGN_IN || formState == STATES.SIGN_UP ? (
+          <div className="or-sep">
+            <Accounts.ui.PasswordOrService oauthServices={ oauthServices } />
+          </div>
+        ) : null }
+        { formState == STATES.SIGN_IN || formState == STATES.SIGN_UP ? (
+            <Accounts.ui.SocialButtons oauthServices={ oauthServices } />
+        ) : null }
         <Accounts.ui.FormMessage {...message} />
       </form>
     );
@@ -59,6 +81,25 @@ class Field extends Accounts.ui.Field {
     ) : null;
   }
 }
+class SocialButtons extends Accounts.ui.SocialButtons {
+  render() {
+    let { oauthServices = {}, className = "social-buttons" } = this.props;
+    return(
+      <div className={ [
+        className,
+        `cols-${ Object.keys(oauthServices).length }`
+      ].join(' ') }>
+        {Object.keys(oauthServices).map((id, i) => {
+          return (
+            <div className="col" key={i}>
+              <Accounts.ui.Button className={id} {...oauthServices[id]} />
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+}
 class FormMessage extends Accounts.ui.FormMessage {}
 // Notice! Accounts.ui.LoginForm manages all state logic at the moment, so avoid
 // overwriting this one, but have a look at it and learn how it works. And pull
@@ -70,7 +111,9 @@ Accounts.ui.Buttons = Buttons;
 Accounts.ui.Button = Button;
 Accounts.ui.Fields = Fields;
 Accounts.ui.Field = Field;
+Accounts.ui.SocialButtons = SocialButtons;
 Accounts.ui.FormMessage = FormMessage;
 
 // Export the themed version.
-export { Accounts as default };
+export { Accounts, STATES };
+export default Accounts;

@@ -14,15 +14,18 @@
       padding: 0 0 8px;
     }
     padding-bottom: 16px;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
   .field {
     input {
       width: 100%;
-      font-size: 14px;
-      height: 32px;
+      font-size: 16px;
+      height: 46px;
       box-sizing: border-box;
-      line-height: 32px;
-      padding: 4px 8px;
+      line-height: 46px;
+      padding: 8px 16px;
       background: white;
       border: solid 1px #ccc;
     }
@@ -30,22 +33,30 @@
   a {
     display: inline-block;
     font-weight: bold;
-    padding: 16px;
+    padding: 0 16px;
+    height: 48px;
+    line-height: 48px;
     font-size: 16px;
     cursor: pointer;
-    &.forgot-password {
-      padding-top: 8px;
-      padding-bottom: 24px;
-    }
+    color: #999;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  .fields,
+  .forgot-password {
+    display: block;
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
   button {
     background: #de4f4f;
     color: #FFF;
-    margin-right: 10px;
+    margin-right: 8px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    padding: 16px 32px;
+    padding: 16px 24px;
     font-size: 14px;
     line-height: 16px;
     &[type="submit"] {
@@ -59,5 +70,98 @@
     padding: 16px;
     background: #eee;
     margin-top: 16px;
+  }
+  .or-sep {
+    text-align: center;
+    color: #aaa;
+    padding: 16px;
+    margin-bottom: 8px;
+    div {
+      position: relative;
+      display: inline;
+      &:before, &:after {
+        position: absolute;
+        height: 1px;
+        content: "";
+        width: 30px;
+        top: 50%;
+        background: #aaa;
+      }
+      &:before {
+        left: -40px;
+      }
+      &:after {
+        right: -40px;
+      }
+    }
+  }
+  .social-buttons {
+    margin: -8px;
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      color: white;
+      &.facebook {
+        background-color: #3b5998;
+      }
+      &.twitter {
+        background-color: #0084b4;
+      }
+      &.google {
+        background-color: #dc4a38;
+      }
+      &.linkedin {
+        background-color: #1f88be;
+      }
+      &.instagram {
+        background-color: #49769c;
+      }
+      &.youtube {
+        background-color: #cc181e;
+      }
+      &.meteor-developer {
+        background-color: #de4f4f;
+      }
+      &.meetup {
+        background-color: #E0393E;
+      }
+      &.github {
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+        background-color: #60b044;
+        background-image: -webkit-linear-gradient(#8add6d, #60b044);
+        background-image: linear-gradient(#8add6d, #60b044);
+        border-color: #5ca941;
+      }
+      &.weibo {
+        background-color: #FFA00A;
+      }
+    }
+    .col {
+      display: block;
+      float: left;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    &.cols-2 .col {
+      width: 50%;
+    }
+    &.cols-3 .col {
+      width: 33.33%;
+    }
+    &.cols-4 .col,
+    &.cols-5 .col,
+    &.cols-6 .col,
+    &.cols-7 .col,
+    &.cols-8 .col,
+    &.cols-9 .col {
+      width: 50%;
+    }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 }

@@ -1,6 +1,6 @@
 Package.describe({
   name: 'std:accounts-basic',
-  version: '1.1.0',
+  version: '1.1.1',
   summary: 'Basic – Accounts UI for React in Meteor 1.3',
   git: 'https://github.com/studiointeract/accounts-basic',
   documentation: 'README.md'
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('underscore');
   api.use('fourseven:scss@3.4.1');
-  api.use('std:accounts-ui@1.1.0');
+  api.use('std:accounts-ui@1.1.2');
 
   api.addFiles([
     'styles.scss'
