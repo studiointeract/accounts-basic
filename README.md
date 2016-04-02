@@ -27,7 +27,7 @@ Current version 1.1.5
 
 We support the standard [configuration in the account-ui package](http://docs.meteor.com/#/full/accounts_ui_config). But have extended with some new options.
 
-### [Accounts.ui.config(options)](https://github.com/studiointeract/accounts-ui#configuration)
+> [Accounts.ui.config(options)](https://github.com/studiointeract/accounts-ui#configuration)
 
 ### Example setup (Meteor 1.3)
 
