@@ -1,6 +1,19 @@
+$primary: #de4f4f;
+$secondary: #999;
+$facebook: #3b5998;
+$twitter: #0084b4;
+$google: #dc4a38;
+$linkedin: #1f88be;
+$instagram: #49769c;
+$youtube: #cc181e;
+$meteor-developer: #de4f4f;
+$meetup: #E0393E;
+$github: #60b044;
+$weibo: #FFA00A;
+
 .accounts-ui {
   padding: 16px;
-  border: solid 3px #de4f4f;
+  border: solid 3px $primary;
   background: white;
   margin: 16px;
   max-width: 500px;
@@ -50,7 +63,8 @@
     box-sizing: border-box;
   }
   button {
-    background: #de4f4f;
+    background: $secondary;
+    outline: none;
     color: #FFF;
     margin-right: 8px;
     text-transform: uppercase;
@@ -59,11 +73,19 @@
     padding: 16px 24px;
     font-size: 14px;
     line-height: 16px;
+    cursor: pointer;
     &[type="submit"] {
-      background: #de4f4f;
+      background: $primary;
     }
     &[disabled] {
       opacity: 0.5;
+    }
+    &:focus,
+    &:hover {
+      background-color: lighten($primary, 5%);
+    }
+    &:active {
+      background-color: darken($primary, 5%);
     }
   }
   .message {
@@ -103,39 +125,108 @@
       text-align: center;
       box-sizing: border-box;
       color: white;
+      &[disabled] {
+        opacity: 0.5;
+      }
       &.facebook {
-        background-color: #3b5998;
+        background-color: $facebook;
+        &:focus,
+        &:hover {
+          background-color: lighten($facebook, 5%);
+        }
+        &:active {
+          background-color: darken($facebook, 5%);
+        }
       }
       &.twitter {
-        background-color: #0084b4;
+        background-color: $twitter;
+        &:focus,
+        &:hover {
+          background-color: lighten($twitter, 5%);
+        }
+        &:active {
+          background-color: darken($twitter, 5%);
+        }
       }
       &.google {
-        background-color: #dc4a38;
+        background-color: $google;
+        &:focus,
+        &:hover {
+          background-color: lighten($google, 5%);
+        }
+        &:active {
+          background-color: darken($google, 5%);
+        }
       }
       &.linkedin {
-        background-color: #1f88be;
+        background-color: $linkedin;
+        &:focus,
+        &:hover {
+          background-color: lighten($linkedin, 5%);
+        }
+        &:active {
+          background-color: darken($linkedin, 5%);
+        }
       }
       &.instagram {
-        background-color: #49769c;
+        background-color: $instagram;
+        &:focus,
+        &:hover {
+          background-color: lighten($instagram, 5%);
+        }
+        &:active {
+          background-color: darken($instagram, 5%);
+        }
       }
       &.youtube {
-        background-color: #cc181e;
+        background-color: $youtube;
+        &:focus,
+        &:hover {
+          background-color: lighten($youtube, 5%);
+        }
+        &:active {
+          background-color: darken($youtube, 5%);
+        }
       }
       &.meteor-developer {
-        background-color: #de4f4f;
+        background-color: $meetup;
+        &:focus,
+        &:hover {
+          background-color: lighten($meetup, 5%);
+        }
+        &:active {
+          background-color: darken($meetup, 5%);
+        }
       }
       &.meetup {
-        background-color: #E0393E;
+        background-color: $meetup;
+        &:focus,
+        &:hover {
+          background-color: lighten($meetup, 5%);
+        }
+        &:active {
+          background-color: darken($meetup, 5%);
+        }
       }
       &.github {
-        text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
-        background-color: #60b044;
-        background-image: -webkit-linear-gradient(#8add6d, #60b044);
-        background-image: linear-gradient(#8add6d, #60b044);
-        border-color: #5ca941;
+        background-color: $github;
+        &:focus,
+        &:hover {
+          background-color: lighten($github, 5%);
+        }
+        &:active {
+          background-color: darken($github, 5%);
+        }
       }
       &.weibo {
-        background-color: #FFA00A;
+        background-color: $weibo;
+        &:focus,
+        &:hover {
+          background-color: lighten($weibo, 5%);
+        }
+        &:active {
+          background-color: darken($weibo, 5%);
+        }
       }
     }
     .col {
