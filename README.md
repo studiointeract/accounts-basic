@@ -7,7 +7,7 @@ Current version 1.1.5
 ## Features
 
 1. **[Easy to use](https://github.com/studiointeract/accounts-ui#using-accounts-ui)**, mixing the ideas of useraccounts configuration and accounts-ui that everyone already knows and loves.
-3. **[Components](https://github.com/studiointeract/accounts-ui#components-available)** are everywhere, and extensible by replacing them on Accounts.ui.
+3. **[Components](https://github.com/studiointeract/accounts-ui#available-components)** are everywhere, and extensible by replacing them on Accounts.ui.
 4. **[Basic routing](https://github.com/studiointeract/accounts-ui#configuration)** included, redirections when the user clicks a link in an email or when signing in or out.
 5. **[Unstyled](https://github.com/studiointeract/accounts-ui#styling)** is the default, no CSS included.
 6. **[No password](https://github.com/studiointeract/accounts-ui#no-password-required)** sign up and sign in are included.
