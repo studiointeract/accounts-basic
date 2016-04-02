@@ -76,16 +76,23 @@ $weibo: #FFA00A;
     cursor: pointer;
     &[type="submit"] {
       background: $primary;
+      &:focus,
+      &:hover {
+        background-color: lighten($primary, 5%);
+      }
+      &:active {
+        background-color: darken($primary, 5%);
+      }
     }
     &[disabled] {
       opacity: 0.5;
     }
     &:focus,
     &:hover {
-      background-color: lighten($primary, 5%);
+      background-color: lighten($secondary, 5%);
     }
     &:active {
-      background-color: darken($primary, 5%);
+      background-color: darken($secondary, 5%);
     }
   }
   .message {
