@@ -6,14 +6,15 @@ Current version 1.1.5
 
 ## Features
 
-1. **[Easy to use](https://github.com/studiointeract/accounts-ui#using-accounts-ui)**, mixing the ideas of useraccounts configuration and accounts-ui that everyone already knows and loves.
-3. **[Components](https://github.com/studiointeract/accounts-ui#available-components)** are everywhere, and extensible by replacing them on Accounts.ui.
-4. **[Basic routing](https://github.com/studiointeract/accounts-ui#configuration)** included, redirections when the user clicks a link in an email or when signing in or out.
-5. **[Unstyled](https://github.com/studiointeract/accounts-ui#styling)** is the default, no CSS included.
-6. **[No password](https://github.com/studiointeract/accounts-ui#no-password-required)** sign up and sign in are included.
-7. **[Extra fields](https://github.com/studiointeract/accounts-ui#extra-fields)** is now supported.
-8. **[Server Side Rendering](https://github.com/studiointeract/accounts-ui#example-setup-using-flowrouter-meteor-13)** are supported, trough FlowRouter (SSR).
-9. **[Extending](https://github.com/studiointeract/accounts-ui#create-your-own-styled-version)** to make your own custom form, for your app, or as a package, all components can be extended and customized.
+1. **[Easy to use](https://github.com/studiointeract/accounts-ui#using-react-accounts-ui)**, mixing the ideas of useraccounts configuration and accounts-ui that everyone already knows and loves.
+2. **[Components](https://github.com/studiointeract/accounts-ui#available-components)** are everywhere, and extensible by replacing them on Accounts.ui.
+3. **[Basic routing](https://github.com/studiointeract/accounts-ui#configuration)** included, redirections when the user clicks a link in an email or when signing in or out.
+4. **[Unstyled](https://github.com/studiointeract/accounts-ui#styling)** is the default, no CSS included.
+5. **[No password](https://github.com/studiointeract/accounts-ui#no-password-required)** sign up and sign in are included.
+6. **[Extra fields](https://github.com/studiointeract/accounts-ui#extra-fields)** is now supported.
+7. **[Server Side Rendering](https://github.com/studiointeract/accounts-ui#example-setup-using-flowrouter-meteor-13)** are supported, trough FlowRouter (SSR).
+7. **[Extending](https://github.com/studiointeract/accounts-ui#create-your-own-styled-version)** to make your own custom form, for your app, or as a package, all components can be extended and customized.
+9. **[States API](https://github.com/studiointeract/accounts-ui#example-setup-using-the-states-api)** makes it possible to use the form on different routes, say you want the login on one route and signup on another, just set the inital state and the links (either globally or per component by using the props).
 
 ### Based on and extends std:accounts-ui
 
