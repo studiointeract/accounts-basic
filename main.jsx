@@ -23,7 +23,7 @@ class Form extends Accounts.ui.Form {
       formState
     } = this.props;
     return (
-      <form className={[
+      <form ref={(ref) => this.form = ref} className={[
         "accounts-ui",
         className,
         ready ? "ready" : null
