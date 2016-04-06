@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accounts, STATES } from 'meteor/std:accounts-ui';
+import { _ } from 'meteor/underscore';
 
 /**
  * Form.propTypes = {
@@ -92,7 +93,7 @@ class SocialButtons extends Accounts.ui.SocialButtons {
         {Object.keys(oauthServices).map((id, i) => {
           return (
             <div className="col" key={i}>
-              <Accounts.ui.Button className={id} {...oauthServices[id]} />
+              <Accounts.ui.Button className={`button ${id}`} {..._.omit(oauthServices[id], 'className')} />
             </div>
           );
         })}
