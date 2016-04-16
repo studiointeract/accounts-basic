@@ -71,8 +71,10 @@ class Field extends Accounts.ui.Field {
       <div className="field-group">
         <label htmlFor={ id }>{ label }</label>
         <div className="field">
-          <input id={ id } 
+          <input id={ id }
+            name={ id }
             type={ type }
+            ref={ (ref) => this.input = ref }
             autoCapitalize={ type == 'email' ? 'none' : false }
             autoCorrect="off"
             onChange={ onChange }
