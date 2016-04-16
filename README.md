@@ -1,6 +1,6 @@
 # React Accounts UI for Meteor 1.3 - Basic
 
-Current version 1.1.11
+Current version 1.1.12
 
 ![React Accounts UI for Meteor 1.3 - Basic](https://raw.githubusercontent.com/studiointeract/accounts-basic/master/accounts-basic.png)
 

@@ -1,6 +1,6 @@
 Package.describe({
   name: 'std:accounts-basic',
-  version: '1.1.11',
+  version: '1.1.12',
   summary: 'Basic – Accounts UI for React in Meteor 1.3',
   git: 'https://github.com/studiointeract/accounts-basic',
   documentation: 'README.md'
